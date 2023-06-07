@@ -316,7 +316,7 @@
 
   앱에서 Intent.setPackage()를 호출하는 것이 더 간단하다고 생각될 수 있을 것입니다. 그러나 이렇게 하면 여러 컴포넌트가 일치할 가능성이 있으므로 매우 주의해야 합니다. 가능하면 특정 컴포넌트가 Intent를 수신하도록 지정하는 것이 좋습니다.
 
-  ⚠️ FLAG_IMMUTABLE 플래그로 생성된 PendingIntent의 값을 재정의하려고 시도하면, 변경되지 않은 원래 wrapped Intent가 전달되는 silent failure가 발생합니다.
+  ⚠️ flag_immutable로 생성된 보류 중인 intent의 값을 재정의하려고 하면 자동으로 실패하고 원래 래핑된 intent가 수정되지 않은 상태로 전달됩니다.
 
   불변 PendingIntent는 자체 PendingIntent를 업데이트할 수 있습니다. 다른 앱이 무언가를 변경해야 하는 경우에만 PendingIntent를 가변(mutability)으로 만들어야 합니다.
 
